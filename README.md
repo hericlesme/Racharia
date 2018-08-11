@@ -1,2 +1,2 @@
 # Racharia
-[![Build Status](https://secure.travis-ci.org/fgnass/node-dev.png)](https://travis-ci.org/OpenDevUFCG/Racharia)
+[![Build Status](https://travis-ci.org/OpenDevUFCG/Racharia.svg?branch=master)](https://travis-ci.org/OpenDevUFCG/Racharia)
