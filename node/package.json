@@ -26,6 +26,6 @@
     "prestart": "babel src --out-dir dist/",
     "lint": "eslint .",
     "start": "node dist/index.js",
-    "test": "mocha test/*/*.js"
+    "test": "mocha dist/test/*/*.js"
   }
 }
