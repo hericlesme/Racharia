@@ -1,0 +1,31 @@
+{
+  "name": "racharia",
+  "description": "Sistema WEB para dividir gastos compartilhados",
+  "version": "0.0.0",
+  "author": "Juan Barros <juanlyrabarros@gmail.com>",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "consign": "^0.1.6",
+    "express": "^4.16.3",
+    "express-validator": "^5.3.0",
+    "neo4j-driver": "^1.6.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^1.8",
+    "mocha": "^1.18",
+    "nodemon": "^1.18.3"
+  },
+  "engines": {
+    "node": "8.11.x"
+  },
+  "scripts": {
+    "dev": "babel-node index.js",
+    "prestart": "babel src --out-dir dist/",
+    "lint": "eslint .",
+    "start": "node dist/index.js",
+    "test": "mocha test/*/*.js"
+  }
+}
