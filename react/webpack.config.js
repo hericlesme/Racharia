@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+        entry: './src/index.js',
         output: {
             path: path.resolve(__dirname, 'dist'),
             filename: 'bundle.[hash].js',
@@ -11,8 +11,8 @@ module.exports = {
             rules: [
                 { test: /\.css$/,
                       use: [
-                      { loader: 'style-loader' },
-                      { loader: 'css-loader' }
+                          { loader: 'style-loader' },
+                          { loader: 'css-loader' }
                       ]
                 },
                 {
@@ -31,7 +31,9 @@ module.exports = {
         },
         plugins: [
             new HtmlWebpackPlugin({
-                template: './public/index.html'
+                template: './public/index.html',
+                favicon: './public/favicon.ico'
             })
-        ]
+        ],
+        mode: 'development'
 }
