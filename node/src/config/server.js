@@ -11,8 +11,8 @@ app.use(bodyparser.urlencoded({extended: true}));
 app.use(morgan('tiny'));
 app.use(validator());
 consign()
-    .include('dist/routes')
-    .then('dist/models')
-    .into(app);
+	.include('dist/routes')
+	.then('dist/models')
+	.into(app);
 
 export default app;
