@@ -28,9 +28,11 @@
   "scripts": {
     "dev": "babel-node index.js",
     "prestart": "babel src --out-dir dist/",
-    "lint": "eslint . --fix --ignore-path .gitignore",
+    "lint": "eslint . --ignore-path .gitignore",
+    "lint-fix": "eslint . --fix --ignore-path .gitignore",
     "start": "nodemon dist/index.js",
     "pretest": "babel src/test --out-dir dist/test",
-    "test": "mocha dist/test/*/*.js"
+    "test": "mocha dist/test/*/*.js",
+    "posttest": "eslint . --ignore-path .gitignore"
   }
 }
