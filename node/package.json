@@ -17,6 +17,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "chai": "^1.8",
+    "eslint-plugin-react": "^7.10.0",
     "nodemon": "^1.18.3"
   },
   "engines": {
@@ -29,5 +30,6 @@
     "start": "nodemon dist/index.js",
     "pretest": "babel src/test --out-dir dist/test",
     "test": "mocha dist/test/*/*.js"
-  }
+  },
+  "eslintIgnore": []
 }
