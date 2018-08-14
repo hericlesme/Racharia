@@ -3,6 +3,10 @@
   "description": "Sistema WEB para dividir gastos compartilhados",
   "version": "0.0.0",
   "author": "Juan Barros <juanlyrabarros@gmail.com>, Thayanne Sousa <thayannevls@gmail.com>, Fanny Vieira <fannyvieira082@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenDevUFCG/Racharia.git"
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "consign": "^0.1.6",
