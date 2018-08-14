@@ -1,0 +1,12 @@
+{
+    "app": {
+        "port": 8080
+    },
+    "db": {
+        "host": "bolt://localhost:",
+        "port": 7687,
+        "dialect": "neo4j",
+        "username": "root",
+        "password": "root"
+    }
+}
