@@ -3,10 +3,6 @@
   "description": "Sistema WEB para dividir gastos compartilhados",
   "version": "0.0.0",
   "author": "Juan Barros <juanlyrabarros@gmail.com>, Thayanne Sousa <thayannevls@gmail.com>, Fanny Vieira <fannyvieira082@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/OpenDevUFCG/Racharia.git"
-  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "consign": "^0.1.6",
@@ -47,6 +43,9 @@
     "start": "node dist/index.js",
     "server": "nodemon dist/index.js --exec babel-node",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
+    "build-client": "webpack --display-error-details",
+    "build-server": "babel server/src --out-dir dist/",
+    "build": "npm run build-server && npm run build-client",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "pretest": "babel server/src/test --out-dir dist/test",
     "test": "mocha server/src/test/*/*.js",
