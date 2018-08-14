@@ -1,5 +1,5 @@
-export default (application) =>{
+module.exports = (application) => {
 	application.get('/', (req, res) => {
-		console.log(application);
+		res.send(200);
 	});
 };
