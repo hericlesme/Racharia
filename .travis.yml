@@ -1,7 +1,7 @@
 sudo: false
 language: node_js
 before_script: 
-  - cd node
   - npm install
+  - npm run build
 node_js:
   - 8
