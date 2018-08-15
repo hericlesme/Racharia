@@ -36,6 +36,7 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-react": "^7.11.1",
     "eslint-watch": "^4.0.2",
+    "nconf": "^0.10.0",
     "nodemon": "^1.18.3"
   },
   "engines": {
