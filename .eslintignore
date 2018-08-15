@@ -1,7 +1,6 @@
 node_modules/
 dist/
 public/
-client/
 .gitignore
 webpack.config.babel.js
 

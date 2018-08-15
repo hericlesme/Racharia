@@ -20,17 +20,22 @@
     "webpack-dev-server": "^3.1.5"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "chai": "^1.8",
     "concurrently": "^3.6.1",
     "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-watch": "^4.0.2",
     "nodemon": "^1.18.3"
   },
   "engines": {
@@ -38,17 +43,18 @@
   },
   "scripts": {
     "prestart": "babel node/src --out-dir dist/",
-    "lint": "eslint .",
-    "lint-fix": "eslint . --fix",
+    "lint": "eslint client && eslint node --ignore-path .gitignore",
+    "lint-fix": "eslint client && eslint node  --fix --ignore-path .gitignore",
     "start": "node dist/index.js",
     "server": "nodemon dist/index.js --exec babel-node",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "build-client": "webpack --display-error-details",
     "build-server": "babel node/src --out-dir dist/",
     "build": "npm run build-server && npm run build-client",
+    "predev": "npm run build",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "pretest": "babel dist/test --out-dir dist/test",
     "test": "mocha dist/test/*/*.js",
-    "posttest": "eslint ."
+    "posttest": "eslint client && eslint node --ignore-path .gitignore"
   }
 }
