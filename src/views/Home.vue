@@ -1,18 +1,28 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <price-selector :updatePrice = updatePrice />
+
+    {{ price }}
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import PriceSelector from '@/components/PriceSelector'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    'price-selector': PriceSelector
+  },
+  data () {
+    return {
+      price: ''
+    }
+  },
+  methods: {
+    updatePrice (price) {
+      this.price = price
+    }
   }
 }
 </script>
