@@ -1,18 +1,16 @@
 <template>
   <div class="home">
-    <price-selector :updatePrice = updatePrice />
-
-    {{ price }}
+    <current-step/>
   </div>
 </template>
 
 <script>
-import PriceSelector from '@/components/PriceSelector'
+import CurrentStep from '@/components/step/CurrentStep'
 
 export default {
   name: 'home',
   components: {
-    'price-selector': PriceSelector
+    'current-step': CurrentStep
   },
   data () {
     return {
