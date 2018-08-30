@@ -9,6 +9,10 @@
 </template>
 <script>
 export default {
+  name: 'UsersStep',
+  props: {
+    updateUser: Function
+  },
   data () {
     const users = [
       {
@@ -24,20 +28,20 @@ export default {
     ]
     return {
       data: users,
-      selectedUser: [],
+      selectedUser: []
     }
   },
-  watch:{
-      selectedUser(option){
-          const user = this.data.filter(user => {return user.key === option[0]})
-          console.log(user)
-      }
+  watch: {
+    selectedUser (option) {
+      const user = this.data.filter(user => { return user.key === option[0] })
+      this.updateUser(user)
+    }
   }
 }
 </script>
 <style>
 #transfer-panel{
-    text-align: left; 
+    text-align: left;
     display: inline-block;
     margin: 50px 0 20px;
 }
