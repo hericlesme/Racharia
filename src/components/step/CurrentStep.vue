@@ -1,8 +1,7 @@
 <template>
   <div>
     <price-step :updatePrice= updatePrice />
-     <users-step :updateUser= updateUser />
-     {{user}}
+     <users-step :updateUsers= updateUsers />
   </div>
 </template>
 
@@ -18,15 +17,15 @@ export default {
   data () {
     return {
       price: 0,
-      user: {}
+      users: []
     }
   },
   methods: {
     updatePrice (price) {
       this.price = price
     },
-    updateUser (user) {
-      this.user = user
+    updateUsers (users) {
+      this.users = users
     }
   }
 }

@@ -1,48 +1,55 @@
 <template>
-    <div id="transfer-panel">
+    <div>
+      <h2>Escolha quem vai dividir</h2>
+      <el-row>
         <el-transfer
-            v-model="selectedUser"
-            :data="data"
-            :titles="['Opções', 'Selecionado']">
+          v-model="selectedUsers"
+          :data="users"
+          :titles="['Opções', 'Selecionado']">
         </el-transfer>
+      </el-row>
+      <el-row>
+        <el-button>Avançar</el-button>
+      </el-row>
     </div>
 </template>
+
 <script>
 export default {
   name: 'UsersStep',
   props: {
-    updateUser: Function
+    updateUsers: Function
   },
   data () {
-    const users = [
-      {
-        key: 1,
-        label: 'Fanny Vieira'
-      }, {
-        key: 2,
-        label: 'Juan Barros'
-      }, {
-        key: 3,
-        label: 'Thayanne Luiza'
-      }
-    ]
     return {
-      data: users,
-      selectedUser: []
+      users: [
+        {
+          key: 1,
+          label: 'Fanny Vieira'
+        }, {
+          key: 2,
+          label: 'Juan Barros'
+        }, {
+          key: 3,
+          label: 'Thayanne Luiza'
+        }
+      ],
+      selectedUsers: []
     }
   },
   watch: {
-    selectedUser (option) {
-      const user = this.data.filter(user => { return user.key === option[0] })
-      this.updateUser(user)
+    selectedUsers (selectedUsers) {
+      this.updateUsers(this.selectedUsers.map((index) => this.users[index - 1]))
     }
   }
 }
 </script>
-<style>
-#transfer-panel{
-    text-align: left;
-    display: inline-block;
-    margin: 50px 0 20px;
+<style lang="scss" scoped>
+.el-transfer {
+  text-align: left;
+  display: inline-block;
+}
+.el-row {
+  margin: 10px;
 }
 </style>

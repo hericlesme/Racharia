@@ -19,6 +19,7 @@
 }
 
 .main-view {
+  margin: auto;
   margin-bottom: 60px;
   display: block;
   max-width: 1000px;
