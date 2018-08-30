@@ -19,8 +19,8 @@
 }
 
 .main-view {
-    margin: auto;
-    display: block;
-    max-width: 1000px;
+  margin-bottom: 60px;
+  display: block;
+  max-width: 1000px;
 }
 </style>
