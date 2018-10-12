@@ -19,15 +19,8 @@
 </template>
 
 <script>
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-
 export default {
   name: 'app',
-  components: {
-    'app-header': Header,
-    'app-footer': Footer
-  },
   data () {
     return {
       activeIndexHeader: '/'
@@ -51,8 +44,7 @@ export default {
   max-width: 100%;
 }
 
-body{
+body, html{
     margin: 0;
 }
-
 </style>
