@@ -1,9 +1,9 @@
 <template>
-  <el-container>
+  <el-container style="height:800px">
     <el-main>
       <component :is="currentTabComponent"></component>
+       <el-button @click="updateStep">Avançar</el-button>
     </el-main>
-    <el-button @click="updateStep">Avançar</el-button>
     <el-footer>
       <step-guide :active=step />
     </el-footer>

@@ -1,7 +1,5 @@
 <template>
-<div>
   <current-step/>
-</div>
 </template>
 
 <script>

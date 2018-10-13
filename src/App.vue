@@ -12,7 +12,7 @@
     </el-menu>
     <el-container>
       <el-main class="main-view">
-        <router-view/>
+        <router-view class="view"/>
       </el-main>
     </el-container>
   </div>
@@ -40,11 +40,10 @@ export default {
 
 .main-view {
   margin-top: 60px;
-  display: block;
-  max-width: 100%;
 }
 
-body, html{
-    margin: 0;
+body{
+  margin: 0;
+  padding: 0;
 }
 </style>
