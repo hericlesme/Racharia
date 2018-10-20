@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-    <current-step/>
-  </div>
+  <current-step/>
 </template>
 
 <script>

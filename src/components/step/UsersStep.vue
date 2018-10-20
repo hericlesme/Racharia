@@ -8,9 +8,6 @@
           :titles="['Opções', 'Selecionado']">
         </el-transfer>
       </el-row>
-      <el-row>
-        <el-button>Avançar</el-button>
-      </el-row>
     </div>
 </template>
 

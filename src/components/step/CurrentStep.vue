@@ -1,23 +1,41 @@
 <template>
-  <div>
-    <price-step :updatePrice= updatePrice />
-     <users-step :updateUsers= updateUsers />
-  </div>
+  <el-container style="height:800px">
+    <el-main>
+      <component :is="currentTabComponent"></component>
+       <el-button @click="updateStep">Avançar</el-button>
+    </el-main>
+    <el-footer>
+      <step-guide :active=step />
+    </el-footer>
+  </el-container>
 </template>
 
-<script>
+<script scoped>
 import PriceStep from '@/components/step/PriceStep'
 import UsersStep from '@/components/step/UsersStep'
+import StepGuide from '@/components/step/StepGuide'
+
 export default {
   name: 'CurrentStep',
   components: {
     'price-step': PriceStep,
-    'users-step': UsersStep
+    'users-step': UsersStep,
+    'step-guide': StepGuide
   },
   data () {
     return {
+      step: 0,
+      steps: [
+        PriceStep,
+        UsersStep
+      ],
       price: 0,
       users: []
+    }
+  },
+  computed: {
+    currentTabComponent: function () {
+      return this.steps[this.step]
     }
   },
   methods: {
@@ -26,7 +44,20 @@ export default {
     },
     updateUsers (users) {
       this.users = users
+    },
+    updateStep (step) {
+      this.step++
     }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+.el-main{
+  text-align: center;
+}
+.el-footer {
+  padding: 0px;
+}
+</style>
