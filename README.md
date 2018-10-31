@@ -27,4 +27,7 @@ npm run lint
 ```
 npm run test:unit
 ```
+# Racheiros
+[![](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/images/0)](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/links/0)[![](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/images/1)](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/links/1)[![](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/images/2)](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/links/2)[![](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/images/3)](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/links/3)[![](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/images/4)](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/links/4)[![](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/images/5)](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/links/5)[![](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/images/6)](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/links/6)[![](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/images/7)](https://sourcerer.io/fame/thayannevls/OpenDevUFCG/Racharia/links/7)
 
+Made with [hall-of-fame](https://github.com/sourcerer-io/hall-of-fame)
