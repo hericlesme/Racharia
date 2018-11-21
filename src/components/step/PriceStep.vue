@@ -4,7 +4,7 @@
       Escolha a opção de preço
     </h2>
     <el-row>
-      <price-selector :updatePrice= updatePrice />
+      <price-selector v-on:updatePrice="$emit('updatePrice', $event)" />
     </el-row>
   </div>
 </template>
@@ -15,9 +15,6 @@ export default {
   name: 'PriceStep',
   components: {
     PriceSelector
-  },
-  props: {
-    updatePrice: Function
   }
 }
 </script>

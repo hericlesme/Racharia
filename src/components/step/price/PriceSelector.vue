@@ -12,9 +12,6 @@
 <script>
 export default {
   name: 'PriceSelector',
-  props: {
-    updatePrice: Function
-  },
   data () {
     return {
       options: [
@@ -36,7 +33,7 @@ export default {
   },
   watch: {
     selected (newSelected, oldSelected) {
-      this.updatePrice(newSelected)
+      this.$emit('updatePrice', this.selected)
     }
   }
 }

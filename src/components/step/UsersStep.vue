@@ -14,9 +14,6 @@
 <script>
 export default {
   name: 'UsersStep',
-  props: {
-    updateUsers: Function
-  },
   data () {
     return {
       users: [
@@ -36,7 +33,7 @@ export default {
   },
   watch: {
     selectedUsers (selectedUsers) {
-      this.updateUsers(this.selectedUsers.map((index) => this.users[index - 1]))
+      this.$emit('updateUsers', this.selectedUsers.map((index) => this.users[index - 1]))
     }
   }
 }
