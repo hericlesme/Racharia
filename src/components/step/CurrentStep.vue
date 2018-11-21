@@ -2,8 +2,8 @@
   <el-container style="height:800px">
     <el-main>
       <component :is="currentTabComponent"
-        v-on:updatePrice="updatePrice($event)"
-        v-on:updateUsers="updateUsers($event)"></component>
+        v-on:updatePrice="updatePrice"
+        v-on:updateUsers="updateUsers"></component>
        <el-button @click="updateStep">Avançar</el-button>
     </el-main>
     <el-footer>
