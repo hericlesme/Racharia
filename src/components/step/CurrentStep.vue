@@ -1,11 +1,13 @@
 <template>
   <el-container style="height:800px">
     <el-main>
-      <component :is="currentTabComponent"></component>
+      <component :is="currentTabComponent"
+        v-on:updatePrice="updatePrice($event)"
+        v-on:updateUsers="updateUsers($event)"></component>
        <el-button @click="updateStep">Avançar</el-button>
     </el-main>
     <el-footer>
-      <step-guide :active=step />
+      <step-guide :active="step" />
     </el-footer>
   </el-container>
 </template>
@@ -34,7 +36,7 @@ export default {
     }
   },
   computed: {
-    currentTabComponent: function () {
+    currentTabComponent () {
       return this.steps[this.step]
     }
   },
